@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.takehomeassignment11_jingshanw.SecondActivity">
+
+    <ImageView
+        android:id="@+id/book_image_second"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="50dp"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/book_name_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/book_image_second"
+        android:layout_marginLeft="50dp"
+     />
+
+    <TextView
+        android:id="@+id/book_author_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/book_name_second"
+        android:layout_toRightOf="@id/book_image_second"
+        android:layout_marginLeft="50dp"/>
+</RelativeLayout>
