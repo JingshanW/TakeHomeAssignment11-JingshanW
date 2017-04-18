@@ -28,9 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void addRandomBook(View view) {
-        books.add(getRandomBook());
-    }
+
 
     public void initialData(){
         books=new ArrayList<>();
@@ -50,5 +48,11 @@ public class MainActivity extends AppCompatActivity {
         else{
             return new Book("The Sun Also Rises","Ernest Hemingway",R.drawable.thesunalsorises);
         }
+    }
+
+    public void addRandomBook(View view)
+    {
+        books.add(getRandomBook());
+        booksAdapter.notifyDataSetChanged();
     }
 }

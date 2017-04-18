@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import static com.example.android.takehomeassignment11_jingshanw.Keys.BOOK;
+
 public class SecondActivity extends AppCompatActivity {
 
     private ImageView image;
@@ -22,10 +24,11 @@ public class SecondActivity extends AppCompatActivity {
         author= (TextView) findViewById(R.id.book_author_second);
 
         Intent intent=getIntent();
-        int i=intent.getIntExtra("IMAGE",1);
-        image.setImageResource(i);
-        name.setText(intent.getStringExtra("NAME"));
-        author.setText(intent.getStringExtra("AUTHOR"));
+//        int i=intent.getIntExtra("IMAGE",1);
+        Book b= (Book) intent.getSerializableExtra(BOOK);
+        image.setImageResource(b.getPhotoId());
+        name.setText(b.getName());
+        author.setText(b.getAuthor());
 
     }
 }

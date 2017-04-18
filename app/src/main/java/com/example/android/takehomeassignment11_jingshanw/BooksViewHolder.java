@@ -41,9 +41,10 @@ public class BooksViewHolder extends RecyclerView.ViewHolder {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, SecondActivity.class);
-                intent.putExtra("NAME", bookName.getText());
-                intent.putExtra("AUTHOR", bookAuthor.getText());
-                intent.putExtra("IMAGE", bookImage.getId());
+//                intent.putExtra("NAME", bookName.getText());
+//                intent.putExtra("AUTHOR", bookAuthor.getText());
+//                intent.putExtra("IMAGE", bookImage.getId());
+                intent.putExtra(Keys.BOOK,book);
                 context.startActivity(intent);
             }
 
